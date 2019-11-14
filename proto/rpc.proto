@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package rpc;
+
+service Rpc {
+  rpc MethodName (Empty) returns (msg);
+}
+
+message Empty {}
+
+message msg {
+  string str = 1;
+}

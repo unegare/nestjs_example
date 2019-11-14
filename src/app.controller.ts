@@ -7,8 +7,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
 //  @Get()
-  @GrpcMethod('A', 'B')
-  getHello(): string {
+  @GrpcMethod('Rpc', 'MethodName')
+  async getHello(): Promise<{str: String}> {
     return this.appService.getHello();
   }
 }
